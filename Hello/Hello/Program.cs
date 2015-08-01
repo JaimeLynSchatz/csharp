@@ -10,8 +10,28 @@ namespace Hello
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello, World! Today is " + DateTime.Now);
+            try
+            {
+                string name = args[0];
+            }
+            catch
+            {
+                // no idea what to do here
+            }
+            else
+            {
+                string name = "Super Secret User";
+            }
+            string response = "";
+            Console.WriteLine("Hello, " + name + "! Today is " + DateTime.Now);
+            Console.WriteLine("Would you like to play a game?\nY\\N");
+            response = Console.ReadLine();
+            if (response == "Y")
+            {
+                Console.WriteLine("That's great! Me, too! What shall we play?");
+            }
             Console.ReadLine();
+
         }
     }
 }
