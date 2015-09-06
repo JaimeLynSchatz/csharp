@@ -10,21 +10,25 @@ namespace BNL
     {
         static void Main(string[] args)
         {
-            enum response
-            {
-                EXIT = 0,
-                SHOP = 1,
-                CHECKOUT = 2,
-                SAVECART = 3 
-            };
-            response = GetUserInput();
-            while (response == SHOP)
+            String response = "No User Input Yet";
+            bool inventoryEmpty = false;
+
+            response = StoreFront.GetUserInput();
+            while (response == "shop")
             { 
                 if (inventoryEmpty)
                 {
                     Console.WriteLine("Thanks for visiting BNL today. Our shelves are empty! Please come again when the apocolypse is over!");
+                    return;
+                }
+                else
+                {
+                    StoreFront.AskUser();
                 }
             }
+
+            Console.WriteLine("Thanks for visiting BNL today. See you later!");
         }
     }
 }
+
