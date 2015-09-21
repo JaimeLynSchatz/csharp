@@ -4,3 +4,8 @@ c:\users\jaime.schatz\documents\visual studio 2015\Projects\BNL\BNL\bin\Debug\BN
 c:\users\jaime.schatz\documents\visual studio 2015\Projects\BNL\BNL\obj\Debug\BNL.csprojResolveAssemblyReference.cache
 c:\users\jaime.schatz\documents\visual studio 2015\Projects\BNL\BNL\obj\Debug\BNL.exe
 c:\users\jaime.schatz\documents\visual studio 2015\Projects\BNL\BNL\obj\Debug\BNL.pdb
+C:\Users\Jaime.Schatz\Source\Repos\csharp\BNL\bin\Debug\BNL.exe.config
+C:\Users\Jaime.Schatz\Source\Repos\csharp\BNL\bin\Debug\BNL.exe
+C:\Users\Jaime.Schatz\Source\Repos\csharp\BNL\bin\Debug\BNL.pdb
+C:\Users\Jaime.Schatz\Source\Repos\csharp\BNL\obj\Debug\BNL.exe
+C:\Users\Jaime.Schatz\Source\Repos\csharp\BNL\obj\Debug\BNL.pdb
