@@ -1,6 +1,6 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using BNL.Clothing;
+using BNL;
 
 namespace BNLTest
 {
@@ -9,12 +9,14 @@ namespace BNLTest
     {
         [TestMethod]
         public void TestMethod1()
-        {
+        { 
             // Arrange
                 public Clothing shirt1 = new Clothing();
-            // Act
+                
 
+            // Act
+                
             // Assert
-        }
+        } // VS is using this bracket to close the bracket on ClothingTest, not TestMethod1
     }
 }
