@@ -9,12 +9,12 @@ namespace BNL
     static class StoreFront
     {
         // get user input here and put it in response
-        static public String GetUserInput()
+        static public string GetUserInput()
         {
             return Console.ReadLine();
         }
 
-        static public String AskUser()
+        static public string AskUser()
         {
             Console.WriteLine("What would you like today?");
             return GetUserInput();

@@ -6,12 +6,11 @@ using System.Threading.Tasks;
 
 namespace BNL
 {
-    class InventoryClass
+    class Inventory
     {
         private int _pricePerItem;
-        private int _itemSize;
-        private String _department;
-        private List<String> _categories = new List<String>();
+        public String Description { get; set; }
+        private List<string> _categories = new List<string>();
 
         public int PricePerItem
         {
@@ -23,32 +22,6 @@ namespace BNL
             set
             {
                 _pricePerItem = value;
-            }
-        }
-
-        public int ItemSize
-        {
-            get
-            {
-                return _itemSize;
-            }
-
-            set
-            {
-                _itemSize = value;
-            }
-        }
-
-        public string Department
-        {
-            get
-            {
-                return _department;
-            }
-
-            set
-            {
-                _department = value;
             }
         }
 
@@ -67,7 +40,3 @@ namespace BNL
     }
 }
 
-
-/* Ideas for Structures
-
-*/

@@ -10,7 +10,7 @@ namespace BNL
     {
         static void Main(string[] args)
         {
-            String response = "No User Input Yet";
+            string response = "No User Input Yet";
             bool inventoryEmpty = false;
 
             response = StoreFront.GetUserInput();
