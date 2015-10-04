@@ -9,7 +9,7 @@ namespace BNL
     class Program
     {
         static void Main(string[] args)
-        {
+        {  
             string response = "No User Input Yet";
             bool inventoryEmpty = false;
 
