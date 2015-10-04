@@ -9,13 +9,15 @@ namespace BNLTest
     {
         [TestMethod]
         public void TestMethod1()
-        { 
+        {
             // Arrange
-                public Clothing shirt1 = new Clothing();
-                
-
+            Clothing shirt1 = new Clothing();
+            shirt1.Color = "white";
+            shirt1.Gender = "men's";
+            shirt1.Size = "large";    
+            shirt1.Description
             // Act
-                
+            
             // Assert
         } // VS is using this bracket to close the bracket on ClothingTest, not TestMethod1
     }
