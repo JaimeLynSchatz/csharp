@@ -14,11 +14,14 @@ namespace BNLTest
             Clothing shirt1 = new Clothing();
             shirt1.Color = "white";
             shirt1.Gender = "men's";
-            shirt1.Size = "large";    
-            shirt1.Description
+            shirt1.Size = "large";
+            shirt1.Description = shirt1.Gender + " " + shirt1.Color + " " + shirt1.Size + " ClothingType here";
+
             // Act
-            
+            // working this part out still
+
             // Assert
-        } // VS is using this bracket to close the bracket on ClothingTest, not TestMethod1
+            Assert.AreEqual("men's white large ClothingType here", shirt1.Description);
+        }
     }
 }

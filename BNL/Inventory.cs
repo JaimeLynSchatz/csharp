@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace BNL
 {
-    class Inventory
+    public class Inventory
     {
         private int _pricePerItem;
         public String Description { get; set; }
