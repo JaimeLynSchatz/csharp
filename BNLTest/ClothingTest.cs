@@ -8,7 +8,25 @@ namespace BNLTest
     public class ClothingTest
     {
         [TestMethod]
-        public void TestMethod1()
+        public void CanCreateClothingItem()
+        {
+            // Arrange
+            Clothing shirt1 = new Clothing();
+            shirt1.Color = "white";
+            shirt1.Gender = "men's";
+            shirt1.Size = "large";
+            shirt1.Description = shirt1.Gender + " " + shirt1.Color + " " + shirt1.Size + " ClothingType here";
+
+            // Act
+            // working this part out still
+
+            // Assert
+            Assert.AreEqual("men's white large ClothingType here", shirt1.Description);
+            
+        }
+
+        [TestMethod]
+        public void ClothingItemsAreSeparateObjects()
         {
             // Arrange
             Clothing shirt1 = new Clothing();
@@ -24,11 +42,8 @@ namespace BNLTest
             dress1.Description = dress1.Gender + " " + dress1.Color + " " + dress1.Size + " ClothingType here";
 
             // Act
-            // working this part out still
 
             // Assert
-            Assert.AreEqual("men's white large ClothingType here", shirt1.Description);
-            Assert.AreEqual("women's red large ClothingType here", dress1.Description);
             Assert.AreNotEqual(shirt1.Description, dress1.Description);
         }
     }
