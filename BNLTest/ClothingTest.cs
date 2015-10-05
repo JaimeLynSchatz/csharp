@@ -7,6 +7,23 @@ namespace BNLTest
     [TestClass]
     public class ClothingTest
     {
+        // Included here to spark discussion
+        // Do we include tests for basics like this or do we depend on the compiler. Or later tests
+        // (see below -- the tests below depend on inheritance working)
+        [TestMethod]
+        public void ClothingInheritsFromInventory()
+        {
+            // Arrange
+            Clothing pants = new Clothing();
+            pants.Description = "Here's a little description";
+
+            // Act
+            string pantsDescription = pants.Description;
+
+            // Assert
+            Assert.IsNotNull(pantsDescription);
+        }
+
         [TestMethod]
         public void CanCreateClothingItem()
         {
