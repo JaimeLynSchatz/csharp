@@ -11,6 +11,7 @@ namespace BNL
         private int _pricePerItem;
         public String Description { get; set; }
         private List<string> _categories = new List<string>();
+        public int itemCount { get; set; }
 
         public int PricePerItem
         {

@@ -63,5 +63,6 @@ namespace BNLTest
             // Assert
             Assert.AreNotEqual(shirt1.Description, dress1.Description);
         }
+
     }
 }
