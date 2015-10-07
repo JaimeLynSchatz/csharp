@@ -57,7 +57,7 @@ namespace BNLTest
 
             // Assert
             Assert.IsNotNull(inventoryItem.Categories); // passes
-            Assert.AreEqual(list.Length, inventoryItem.Categories.Count);
+            Assert.AreEqual(list.Count, inventoryItem.Categories.Count);
             Assert.AreEqual(list[0], inventoryItem.Categories[0]);
             Assert.AreEqual(list[1], inventoryItem.Categories[1]);
             Assert.AreEqual(list[2], inventoryItem.Categories[2]);
