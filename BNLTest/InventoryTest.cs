@@ -2,6 +2,7 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using BNL;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace BNLTest
 {
@@ -43,23 +44,23 @@ namespace BNLTest
         [TestMethod]
         public void CanSetCategories()
         {
-            // Arrange
-            Inventory inventoryItem = new Inventory();
-            List<string> categoryList = new List<string>();
-            categoryList.Add("socks");
-            categoryList.Add("tights");
-            categoryList.Add("accessories");
+            var list = new List<string>() {
+                "socks",
+                "tights",
+                "accessories"
+            };
 
+            // Arrange
             // Act
-            inventoryItem.Categories.Add("socks");
-            inventoryItem.Categories.Add("tights");
-            inventoryItem.Categories.Add("accessories");
+            Inventory inventoryItem = new Inventory();
+            inventoryItem.Categories.AddRange(list);
 
             // Assert
-            // Assert.IsNotNull(inventoryItem.Categories); -- passes
-            Assert.IsInstanceOfType(inventoryItem.Categories, List<string>);
-            //Assert.AreEqual(inventoryItem.Categories, categoryList);
+            Assert.IsNotNull(inventoryItem.Categories); // passes
+            Assert.AreEqual(list.Length, inventoryItem.Categories.Count);
+            Assert.AreEqual(list[0], inventoryItem.Categories[0]);
+            Assert.AreEqual(list[1], inventoryItem.Categories[1]);
+            Assert.AreEqual(list[2], inventoryItem.Categories[2]);
         }
-
     }
 }
