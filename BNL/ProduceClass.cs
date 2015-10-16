@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace BNL
 {
-    class Produce : Inventory
+    class ProduceClass : InventoryClass
     {
         private int _pricePerPound;
 
@@ -22,5 +22,6 @@ namespace BNL
                 _pricePerPound = value;
             }
         }
+
     }
 }

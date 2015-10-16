@@ -6,43 +6,36 @@ using System.Threading.Tasks;
 
 namespace BNL
 {
-
-
     public class Clothing : Inventory
     {
-        public enum Type
+        enum ClothingType
         {
-            Pants,
-            TShirt,
-            Shirt,
-            Socks,
-            Robe,
-            Dress,
-            Shoes
+            BathingSuit = 0,
+            Pants       = 1,
+            TShirt      = 2,
+            Shirt       = 3,
+            Socks       = 4,
+            Robe        = 5,
+            Dress       = 6,
+            Shoes       = 7
         }
 
-        public Clothing(string g, Type t, string s)
+        public Clothing(String g, String s, String c)
         {
             Gender = g;
-            ClothingType = t;
             Size = s;
+            Color = c;
         }
 
-        public string Gender
+        public String Gender { get; set; }
+        public String Size { get; set; }
+        public String Color { get; set; }
+        public override string Description
         {
-            get;
-            set;
-        }
-
-        public Type ClothingType
-        {
-            get; set;
-        }
-
-        public string Size
-        {
-            get;
-            set;
+            get
+            {
+                return Gender + " " + Color + " " + Size + " ClothingType here";
+            }
         }
     }
 }
