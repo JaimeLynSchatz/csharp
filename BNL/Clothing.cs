@@ -6,12 +6,37 @@ using System.Threading.Tasks;
 
 namespace BNL
 {
-    class Clothing
+
+
+    public class Clothing : Inventory
     {
-        public string Color
+        public enum Type
+        {
+            Pants,
+            TShirt,
+            Shirt,
+            Socks,
+            Robe,
+            Dress,
+            Shoes
+        }
+
+        public Clothing(string g, Type t, string s)
+        {
+            Gender = g;
+            ClothingType = t;
+            Size = s;
+        }
+
+        public string Gender
         {
             get;
             set;
+        }
+
+        public Type ClothingType
+        {
+            get; set;
         }
 
         public string Size

@@ -9,3 +9,4 @@ C:\Users\Jaime.Schatz\Source\Repos\csharp\BNL\bin\Debug\BNL.exe
 C:\Users\Jaime.Schatz\Source\Repos\csharp\BNL\bin\Debug\BNL.pdb
 C:\Users\Jaime.Schatz\Source\Repos\csharp\BNL\obj\Debug\BNL.exe
 C:\Users\Jaime.Schatz\Source\Repos\csharp\BNL\obj\Debug\BNL.pdb
+C:\Users\Jaime.Schatz\Source\Repos\csharp\BNL\obj\Debug\BNL.csprojResolveAssemblyReference.cache

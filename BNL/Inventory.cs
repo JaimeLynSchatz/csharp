@@ -2,27 +2,25 @@
 
 namespace BNL
 {
-    class Inventory
+    public class Inventory
     {
         public Inventory()
         {
-            Department = "";
             Categories = new List<string>();
         }
 
-        public int PricePerItem
+        public int Price
         {
             get;
             set;
         }
 
-        public int ItemSize
+        public string Name
         {
-            get;
-            set;
+            get; set;
         }
 
-        public string Department
+        public string Description
         {
             get;
             set;
