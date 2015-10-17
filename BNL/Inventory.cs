@@ -9,18 +9,20 @@ namespace BNL
             Categories = new List<string>();
         }
 
-        public int Price
+        public int PricePerItem
         {
             get;
             set;
         }
+
+        public int ItemCount { get; set; }
 
         public string Name
         {
             get; set;
         }
 
-        public string Description
+        public virtual string Description
         {
             get;
             set;

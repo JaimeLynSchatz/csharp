@@ -19,7 +19,7 @@ namespace BNLTest
         public void Setup()
         {
             // fetch data from database connection
-            shirt1 = new Clothing("white", "men's", "large");
+            shirt1 = new Clothing("men's", "large", "white");
         }
 
         [TestCleanup]
@@ -38,11 +38,11 @@ namespace BNLTest
         public void CanCreateClothingItem()
         {
             // Arrange
-
+            
             // Act
 
             // Assert
-            Assert.AreEqual("men's white large ClothingType here", shirt1.Description);
+            Assert.AreEqual("men's white large", shirt1.Description);
         }
 
         [TestMethod]

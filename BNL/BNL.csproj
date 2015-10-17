@@ -43,9 +43,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Produce.cs" />
     <Compile Include="Clothing.cs" />
     <Compile Include="Inventory.cs" />
-    <Compile Include="Produce.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="StoreFront.cs" />

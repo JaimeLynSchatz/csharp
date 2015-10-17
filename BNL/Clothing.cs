@@ -8,7 +8,7 @@ namespace BNL
 {
     public class Clothing : Inventory
     {
-        enum ClothingType
+        public enum Type
         {
             BathingSuit = 0,
             Pants       = 1,
@@ -34,7 +34,7 @@ namespace BNL
         {
             get
             {
-                return Gender + " " + Color + " " + Size + " ClothingType here";
+                return Gender + " " + Size + " " + Color;
             }
         }
     }

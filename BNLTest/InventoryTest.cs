@@ -32,10 +32,10 @@ namespace BNLTest
             // Arrange
             Inventory inventoryItem = new Inventory();
             inventoryItem.PricePerItem = 500;
-            inventoryItem.itemCount = 3;
+            inventoryItem.ItemCount = 3;
 
             // Act
-            int extendedPrice = inventoryItem.PricePerItem * inventoryItem.itemCount;
+            int extendedPrice = inventoryItem.PricePerItem * inventoryItem.ItemCount;
 
             // Assert
             Assert.AreEqual(extendedPrice, 500 * 3);
