@@ -10,7 +10,7 @@ namespace BNLTest
         Clothing shirt1;
 
         [ClassInitialize]
-        public void SetupOnce()
+        static public void SetupOnce(TestContext testContext)
         {
             // Create database connection
         }
@@ -29,7 +29,7 @@ namespace BNLTest
         }
 
         [ClassCleanup]
-        public void TearDownOnce()
+        static public void TearDownOnce()
         {
 
         }
@@ -42,9 +42,9 @@ namespace BNLTest
             // Act
 
             // Assert
-            Assert.AreEqual("yes", "yes");
+            //Assert.AreEqual("yes", "yes");
             //Assert.AreEqual(shirt1.Description, shirt1.Description);
-            //Assert.AreEqual("men's white large", shirt1.Description);
+            Assert.AreEqual("men's large white", shirt1.Description);
         }
 
         [TestMethod]
