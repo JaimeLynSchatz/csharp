@@ -8,7 +8,7 @@ namespace BNL
 {
     public class Clothing : Inventory
     {
-        public enum Type
+        public enum ClothingTypes
         {
             BathingSuit = 0,
             Pants       = 1,
@@ -20,11 +20,16 @@ namespace BNL
             Shoes       = 7
         }
 
-        public Clothing(String g, String s, String c)
+        public String ClothingType { get; set; }
+
+        public Clothing(String g, String s, String c, String t)
         {
             Gender = g;
             Size = s;
             Color = c;
+            // what do I do here?
+            ClothingType = ClothingTypes.
+            
         }
 
         public String Gender { get; set; }
@@ -34,7 +39,7 @@ namespace BNL
         {
             get
             {
-                return Gender + " " + Size + " " + Color;
+                return Gender + " " + Size + " " + Color + " ";
             }
         }
     }

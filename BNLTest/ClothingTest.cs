@@ -19,7 +19,7 @@ namespace BNLTest
         public void Setup()
         {
             // fetch data from database connection
-            shirt1 = new Clothing("men's", "large", "white");
+            shirt1 = new Clothing("men's", "large", "white", "Shirt");
         }
 
         [TestCleanup]
@@ -53,6 +53,7 @@ namespace BNLTest
             // Arrange
 
             Clothing dress1 = new Clothing("red", "women's", "large");
+            // TODO: Make the "ClothingType" work properly. Part of constructor???
 
             // Act
 
