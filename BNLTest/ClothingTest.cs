@@ -44,7 +44,7 @@ namespace BNLTest
             // Assert
             //Assert.AreEqual("yes", "yes");
             //Assert.AreEqual(shirt1.Description, shirt1.Description);
-            Assert.AreEqual("men's large white", shirt1.Description);
+            Assert.AreEqual("men's large white Shirt", shirt1.Description);
         }
 
         [TestMethod]
@@ -52,7 +52,7 @@ namespace BNLTest
         {
             // Arrange
 
-            Clothing dress1 = new Clothing("red", "women's", "large");
+            Clothing dress1 = new Clothing("red", "women's", "large", "Dress");
             // TODO: Make the "ClothingType" work properly. Part of constructor???
 
             // Act

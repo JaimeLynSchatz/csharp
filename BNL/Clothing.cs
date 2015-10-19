@@ -20,7 +20,7 @@ namespace BNL
             Shoes       = 7
         }
 
-        public String ClothingType { get; set; }
+        public ClothingTypes ClothingType { get; set; }
 
         public Clothing(String g, String s, String c, String t)
         {
@@ -28,8 +28,10 @@ namespace BNL
             Size = s;
             Color = c;
             // what do I do here?
-            ClothingType = ClothingTypes.
+            ClothingType = (ClothingTypes)Enum.Parse(typeof(ClothingTypes), t);
             
+            // snippet stolen from dotnetperls example
+            // PetType pet = (PetType)Enum.Parse(typeof(PetType), value);
         }
 
         public String Gender { get; set; }
@@ -39,7 +41,7 @@ namespace BNL
         {
             get
             {
-                return Gender + " " + Size + " " + Color + " ";
+                return Gender + " " + Size + " " + Color + " " + ClothingType.ToString();
             }
         }
     }
