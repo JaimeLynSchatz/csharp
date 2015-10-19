@@ -55,6 +55,7 @@
     <Compile Include="ClothingTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="InventoryTest.cs" />
+    <Compile Include="ShoppingCartTest.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\BNL\BNL.csproj">
