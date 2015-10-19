@@ -51,9 +51,7 @@ namespace BNLTest
         public void ClothingItemsAreSeparateObjects()
         {
             // Arrange
-
             Clothing dress1 = new Clothing("red", "women's", "large", "Dress");
-            // TODO: Make the "ClothingType" work properly. Part of constructor???
 
             // Act
 
