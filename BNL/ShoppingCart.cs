@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace BNL
 {
-    class ShoppingCart
+    public class ShoppingCart
     {
 
         public ShoppingCart(int shopperID)
