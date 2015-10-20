@@ -33,7 +33,7 @@ namespace BNLTest
         {
             // teardown the temp DB, etc.
         }
-
+         // TODO test for nulls in all constructors, better exeception catching with the parser
         [TestMethod]
         public void CanAddItemsToShoppingCart()
         {
