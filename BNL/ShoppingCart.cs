@@ -20,6 +20,11 @@ namespace BNL
 
         // TODO: write a method to display the contents of the cart
 
+        // TODO: write a method to add items to the cart
+        public void AddItem(Inventory item)
+        {
+            CartContents.Add(item);
+        }
         // TODO: write a method to add items to the cart in such a way that
         // new items will be added as new entries 
         // but duplicates will be incremented

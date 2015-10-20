@@ -19,7 +19,7 @@ namespace BNLTest
         public void Setup()
         {
             // fetch data from database connection, initialize instances, etc.
-            cart = new ShoppingCart("empty");
+            cart = new ShoppingCart(123);
         }
 
         [TestCleanup]
@@ -37,8 +37,18 @@ namespace BNLTest
         [TestMethod]
         public void CanAddItemsToShoppingCart()
         {
-            cart.Add("inventory item here");
+            // Arrange
+            Clothing shirt1 = new Clothing("men's", "large", "white", "TShirt");
+            Clothing dress1 = new Clothing("women's", "large", "red", "Dress");
+            Clothing robe1 = new Clothing("women's", "medium", "purple", "Robe");
 
+            // Act
+            cart.AddItem(shirt1);
+            cart.AddItem(dress1);
+            cart.AddItem(robe1);
+
+            // Assert
+            cart.Equals(cart);
         }
     }
 }

@@ -22,16 +22,22 @@ namespace BNL
 
         public ClothingTypes ClothingType { get; set; }
 
-        public Clothing(String g, String s, String c, String t)
+        public Clothing(String g, String s, String c, ClothingTypes t)
         {
             Gender = g;
             Size = s;
             Color = c;
-            // what do I do here?
-            ClothingType = (ClothingTypes)Enum.Parse(typeof(ClothingTypes), t);
-            
-            // snippet stolen from dotnetperls example
-            // PetType pet = (PetType)Enum.Parse(typeof(PetType), value);
+            ClothingType = t;
+        }
+
+        public Clothing(String g, String s, String c, String t)
+            : this(g, s, c, Parse(t))
+        {
+        }
+
+        private static ClothingTypes Parse(String ct)
+        {
+            return (ClothingTypes)Enum.Parse(typeof(ClothingTypes), ct);
         }
 
         public String Gender { get; set; }
