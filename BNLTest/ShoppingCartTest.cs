@@ -7,19 +7,20 @@ namespace BNLTest
     [TestClass]
     public class ShoppingCartTest
     {
-        ShoppingCart cart;
+        ShoppingCart cart = new ShoppingCart(123);
 
         [ClassInitialize]
         static public void SetupOnce(TestContext testContext)
         {
             // Create database connection or other resource we'll need throughout
+            
         }
 
         [TestInitialize]
         public void Setup()
         {
             // fetch data from database connection, initialize instances, etc.
-            cart = new ShoppingCart(123);
+            
         }
 
         [TestCleanup]
@@ -44,11 +45,12 @@ namespace BNLTest
 
             // Act
             cart.AddItem(shirt1);
-            cart.AddItem(dress1);
-            cart.AddItem(robe1);
+            //cart.AddItem(dress1);
+            //cart.AddItem(robe1);
 
             // Assert
-            cart.Equals(cart);
+            //cart.Equals(cart);
+            Assert.IsNotNull(cart);
         }
     }
 }
