@@ -42,15 +42,32 @@ namespace BNLTest
             Clothing shirt1 = new Clothing("men's", "large", "white", "TShirt");
             Clothing dress1 = new Clothing("women's", "large", "red", "Dress");
             Clothing robe1 = new Clothing("women's", "medium", "purple", "Robe");
+            int itemCounter = 0;
 
             // Act
             cart.AddItem(shirt1);
-            //cart.AddItem(dress1);
-            //cart.AddItem(robe1);
+            itemCounter++;
+            cart.AddItem(dress1);
+            itemCounter++;
+            cart.AddItem(robe1);
+            itemCounter++;
 
             // Assert
-            //cart.Equals(cart);
-            Assert.IsNotNull(cart);
+            Assert.AreEqual(cart.CartContents.Count, itemCounter);
+        }
+
+        public void CanRemoveItemsFromShoppingCart(Inventory itemToRemove)
+        {
+            // Arrange
+            Clothing shirt1 = new Clothing("men's", "large", "white", "TShirt");
+            Clothing dress1 = new Clothing("women's", "large", "red", "Dress");
+            Clothing robe1 = new Clothing("women's", "medium", "purple", "Robe");
+
+            // Act
+            cart.RemoveItem(shirt1);
+
+            // Assert
+            Assert.AreEqual(true, !cart.CartContents.Contains(shirt1));
         }
     }
 }

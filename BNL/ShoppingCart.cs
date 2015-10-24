@@ -20,7 +20,22 @@ namespace BNL
 
         public List<Inventory> CartContents { get; set; }
 
-        // TODO: write a method to display the contents of the cart
+        // TODO: write a method to display the contents of the cart --
+        // not crazy about this here. It's a UI thing (kind of)
+
+        public void DisplayCart()
+        {
+            Console.WriteLine("**********************");
+            Console.WriteLine("Your Items\n");
+            foreach(Inventory item in CartContents)
+            {
+                Console.WriteLine(item + "\n");
+            }
+            Console.WriteLine("**********************");
+        }
+
+        // TODO: Write a method to return the contents of the cart
+        // how is this different from CartContents??? I don't think it is.
 
         // TODO: write a method to add items to the cart
         public void AddItem(Inventory item)
@@ -30,5 +45,10 @@ namespace BNL
         // TODO: write a method to add items to the cart in such a way that
         // new items will be added as new entries 
         // but duplicates will be incremented
+
+        public void RemoveItem(Inventory item)
+        {
+            CartContents.Remove(item);
+        }
     }
 }
