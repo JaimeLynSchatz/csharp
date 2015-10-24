@@ -12,6 +12,8 @@ namespace BNL
         public ShoppingCart(int shopperID)
         {
             ShopperID = shopperID;
+            CartContents = new List<Inventory>();
+
         }
 
         public int ShopperID { get; set; }
