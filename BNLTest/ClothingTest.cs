@@ -67,6 +67,27 @@ namespace BNLTest
             // Assert
             Assert.IsTrue(clothing != null);
         }
+
+        [TestMethod]
+        [ExpectedException(typeof(ArgumentNullException))]
+        public void WillFailIfGenderIsNull()
+        {
+            Clothing clothing = new Clothing(null, "large", "white", "Shirt");
+        }
+
+        [TestMethod]
+        [ExpectedException(typeof(ArgumentNullException))]
+        public void WillFailIfSizeIsNull()
+        {
+            Clothing clothing = new Clothing("men's", null, "white", "Shirt");
+        }
+
+        [TestMethod]
+        [ExpectedException(typeof(ArgumentNullException))]
+        public void WillFaillIfColorIsNull()
+        {
+            Clothing clothing = new Clothing("men's", "large", null, "Shirt");
+        }
         [TestMethod]
         [ExpectedException(typeof(ArgumentException))]
         public void WillFailToParseIllegibleEnums()
@@ -74,17 +95,22 @@ namespace BNLTest
             Clothing clothing = new Clothing("men's", "large", "white", "beer");
         }
         [TestMethod]
-        [ExpectedException(typeof(ArgumentNullException))]
-        public void WillFailToParseNullEnums()
+        //[ExpectedException(typeof(NullReferenceException))]
+        // Instead, will accept a null clothing type and set it to None
+        public void WillParseNullEnums()
         {
             Clothing clothing = new Clothing("men's", "large", "white", null);
+            Assert.IsNotNull(clothing);
         }
+
         [TestMethod]
-        [ExpectedException(typeof(ArgumentException))]
-        public void WillFailToParseLowercaseEnums()
+        //[ExpectedException(typeof(ArgumentException))]
+        public void WillParseLowercaseEnums()
         {
             Clothing clothing = new Clothing("men's", "large", "white", "shirt");
+            Assert.IsNotNull(clothing);
         }
+
         [TestMethod]
         [ExpectedException(typeof(ArgumentException))]
         public void WillFailToParseUppercaseEnums()
