@@ -39,7 +39,7 @@ namespace BNL
             }
             catch (ArgumentNullException e)
             {
-                System.Console.WriteLine("Please try again, invalid values entered for clothing inventory item at:\n", e);
+                Console.WriteLine("Please try again, invalid values entered for clothing inventory item:\n", e);
                 throw e;
             }
         }
