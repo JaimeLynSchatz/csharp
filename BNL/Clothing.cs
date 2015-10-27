@@ -37,7 +37,7 @@ namespace BNL
                 Color = c;
                 ClothingType = t;
             }
-            catch (ArgumentNullException e)
+            catch ( e) // what kind of exception do I expect to catch here?
             {
                 Console.WriteLine("Please try again, invalid values entered for clothing inventory item:\n", e);
                 throw e;
